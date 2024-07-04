@@ -1,6 +1,6 @@
 services:
   gitlab-server:
-   image: 'gitlab/gitlab-ce:latest'
+   image: 'gitlab/gitlab-ce:16.8.8-ce.0'
    hostname: 'localhost'
    ports:
     - '80:80'
