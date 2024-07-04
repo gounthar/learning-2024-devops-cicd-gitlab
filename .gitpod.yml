@@ -1,0 +1,20 @@
+image:
+  file: .gitpod/Dockerfile
+
+tasks:
+  - init: echo "Preparing your Gitpod workspace..."
+  - command: >
+      docker-compose up -d && 
+      echo "Your services are up and running!"
+
+ports:
+  - port: 80
+    onOpen: open-preview
+  - port: 443
+    onOpen: open-preview
+  - port: 22
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - "gitlab.gitlab-workflow"
