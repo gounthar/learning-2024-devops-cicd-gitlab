@@ -1,0 +1,20 @@
+services:
+  gitlab-server:
+   image: 'gitlab/gitlab-ce:latest'
+   hostname: 'localhost'
+   ports:
+    - '80:80'
+    - '22:22'
+    - '443:4443'
+   environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'http://docker.for.win.localhost'
+   restart: always
+   volumes:
+    - 'gitlab-data:/var/opt/gitlab'
+    - './gitlab-data:/etc/gitlab'
+    - 'gitlab-logs:/var/log/gitlab'
+volumes:
+  gitlab-data:  
+  gitlab-logs:
+
