@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "daily"
   - package-ecosystem: "docker"
-    directory: "/"
+    directory: "/"  # Corrected to ensure Dependabot checks the root directory
     schedule:
       interval: "weekly"
   - package-ecosystem: "docker"
