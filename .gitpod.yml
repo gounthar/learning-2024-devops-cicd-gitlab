@@ -10,8 +10,6 @@ tasks:
 ports:
   - port: 80
     onOpen: open-preview
-  - port: 443
-    onOpen: open-preview
   - port: 22
     onOpen: ignore
 
